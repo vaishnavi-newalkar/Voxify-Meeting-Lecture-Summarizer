@@ -74,9 +74,6 @@ requirements.txt
 
 MP3, MP4, WAV, M4A, OGG, FLAC, WEBM — up to 25 MB (Groq limit)
 
----
-
-## 📸 Key Screens
 
 1. **Upload tab** — drag & drop audio file, instant preview
 2. **Live Recording tab** — mic button with waveform (requires `streamlit-audiorecorder`)
