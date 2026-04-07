@@ -1,0 +1,19 @@
+# -- Core --
+streamlit>=1.38.0        # 1.38+ required for st.audio_input()
+
+# -- HTTP (API calls to Groq & HuggingFace) --
+requests>=2.31.0
+
+# -- Export --
+fpdf2>=2.7.9
+
+# -- Utilities --
+numpy>=1.24.0
+
+# -- NOT required (replaced by Groq/HF APIs) --
+# openai
+# openai-whisper
+# torch
+# torchaudio
+# streamlit-audiorecorder  (replaced by native st.audio_input)
+# pydub                    (no longer needed - no ffmpeg dependency)
