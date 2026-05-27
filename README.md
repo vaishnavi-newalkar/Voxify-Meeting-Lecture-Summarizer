@@ -74,15 +74,8 @@ requirements.txt
 
 MP3, MP4, WAV, M4A, OGG, FLAC, WEBM — up to 25 MB (Groq limit)
 
----
-
-## 📸 Key Screens
 
 1. **Upload tab** — drag & drop audio file, instant preview
 2. **Live Recording tab** — mic button with waveform (requires `streamlit-audiorecorder`)
 3. **Results** — metrics row, transcript + summary side-by-side, action items, speaker labels
 4. **Export** — TXT, PDF, transcript-only, action items checklist
-
----
-
-*Built as a portfolio-grade AI engineering project demonstrating Groq API integration, open-source LLM orchestration, and production-quality Streamlit UI design.*
