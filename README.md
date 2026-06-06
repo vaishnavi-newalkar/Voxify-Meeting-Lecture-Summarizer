@@ -11,7 +11,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.136-green?logo=fastapi)
 ![License](https://img.shields.io/badge/License-MIT-gray)
 
-**[Live Demo](https://voxify-frontend.onrender.com)** · **[API Docs](https://voxify-backend.onrender.com/docs)**
+**[Live Demo]((https://voxify-frontend-n835.onrender.com/))** · **[API Docs]((https://voxify-backend-l6iy.onrender.com/docs))**
 
 > First load takes ~30s — Render free tier cold start.
 
