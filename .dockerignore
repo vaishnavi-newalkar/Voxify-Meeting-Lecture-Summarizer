@@ -1,0 +1,29 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker
+docker-compose.yml
+*.Dockerfile
+.dockerignore
+
+# Misc
+README.md
+*.bak
+harvard.wav

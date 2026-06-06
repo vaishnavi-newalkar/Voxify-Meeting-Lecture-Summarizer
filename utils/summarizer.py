@@ -5,6 +5,9 @@ No OpenAI dependency — fully open-source models.
 
 import json
 import requests
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 # ── Groq Chat helper ──────────────────────────────────────────────────────────
@@ -127,7 +130,7 @@ TRANSCRIPT:
         items = json.loads(clean)
         return items if isinstance(items, list) else []
     except Exception as e:
-        print(f"[Summarizer] Action item extraction failed: {e}")
+        logger.error("Action item extraction failed: %s", e)
         return []
 
 
@@ -166,5 +169,5 @@ TRANSCRIPT:
     try:
         return _groq_chat(system, user, model, api_key, max_tokens=2500, temperature=0.2)
     except Exception as e:
-        print(f"[Summarizer] Speaker ID failed: {e}")
+        logger.error("Speaker ID failed: %s", e)
         return transcript

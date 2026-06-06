@@ -63,7 +63,7 @@ def export_to_pdf(transcript: str, summary: str, action_items: list[str]) -> byt
         def header(self):
             self.set_font("Helvetica", "B", 14)
             self.set_text_color(180, 83, 9)   # Indigo
-            self.cell(0, 10, "Voxify — Meeting Intelligence", align="C", new_x="LMARGIN", new_y="NEXT")
+            self.cell(0, 10, "Voxify - Meeting Intelligence", align="C", new_x="LMARGIN", new_y="NEXT")
             self.set_text_color(0, 0, 0)
             self.set_font("Helvetica", "", 9)
             ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -101,12 +101,12 @@ def export_to_pdf(transcript: str, summary: str, action_items: list[str]) -> byt
         pdf.ln(3)
 
     # Summary
-    section_title("📋 SUMMARY")
+    section_title("SUMMARY")
     body_text(summary if summary else "No summary available.")
 
     # Action Items
     if action_items:
-        section_title("✅ ACTION ITEMS")
+        section_title("ACTION ITEMS")
         for i, item in enumerate(action_items, 1):
             safe = item.encode("latin-1", errors="replace").decode("latin-1")
             pdf.set_font("Helvetica", "", 10)
@@ -115,7 +115,7 @@ def export_to_pdf(transcript: str, summary: str, action_items: list[str]) -> byt
         pdf.ln(3)
 
     # Full Transcript
-    section_title("📄 FULL TRANSCRIPT")
+    section_title("FULL TRANSCRIPT")
     body_text(transcript if transcript else "No transcript available.")
 
     return bytes(pdf.output())
