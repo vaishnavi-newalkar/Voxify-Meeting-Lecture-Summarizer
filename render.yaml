@@ -20,7 +20,7 @@ services:
       - key: HF_API_KEY
         sync: false
       - key: CORS_ORIGINS
-        value: https://voxify-frontend.onrender.com
+        value: https://voxify-frontend-n835.onrender.com
 
   # ── React Frontend (nginx) ─────────────────────────────────────────────────
   - type: web
