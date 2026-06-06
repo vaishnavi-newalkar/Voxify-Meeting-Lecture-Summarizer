@@ -8,7 +8,7 @@ services:
     runtime: docker
     dockerfilePath: ./backend.Dockerfile
     dockerContext: .
-    repo: https://github.com/OWNER/REPO
+    repo: https://github.com/vaishnavi-newalkar/Voxify-Meeting-Lecture-Summarizer.git
     branch: main
     plan: free
     healthCheckPath: /health
@@ -28,7 +28,7 @@ services:
     runtime: docker
     dockerfilePath: ./frontend.Dockerfile
     dockerContext: .
-    repo: https://github.com/OWNER/REPO
+    repo: https://github.com/vaishnavi-newalkar/Voxify-Meeting-Lecture-Summarizer.git
     branch: main
     plan: free
     envVars:

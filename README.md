@@ -1,3 +1,68 @@
+# Voxify
+
+> Full-stack AI application for meeting transcription and summarization.
+> FastAPI + React 19, containerized with Docker, deployed on Render.
+
+[![CI](https://github.com/YOURUSERNAME/voxify/actions/workflows/ci.yml/badge.svg)](https://github.com/YOURUSERNAME/voxify/actions/workflows/ci.yml)
+![Coverage](https://img.shields.io/badge/coverage-100%25-success)
+![Docker](https://img.shields.io/badge/Docker-multi--stage-blue?logo=docker)
+![Python](https://img.shields.io/badge/Python-3.11-orange?logo=python)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.136-green?logo=fastapi)
+![License](https://img.shields.io/badge/License-MIT-gray)
+
+**[Live Demo](https://voxify-frontend.onrender.com)** · **[API Docs](https://voxify-backend.onrender.com/docs)**
+
+> First load takes ~30s — Render free tier cold start.
+
+---
+
+## What it does
+
+Upload or record audio from any meeting or lecture. Voxify transcribes it,
+extracts a structured summary, identifies action items with owners and
+deadlines, and attributes quotes to speakers — all in under 10 seconds.
+Export the result as PDF or TXT.
+
+---
+
+## Tech Stack
+
+| Layer | Technology | Why |
+|---|---|---|
+| **Transcription** | Groq `whisper-large-v3-turbo` | 500 tok/s — 10-20× faster than HF Inference API |
+| **Summarization** | `llama-3.3-70b-versatile` via Groq | Best open-weight model for structured extraction |
+| **Backend** | FastAPI + Python 3.11 | Async, typed, auto OpenAPI docs |
+| **Frontend** | React 19 + Vite | Native MediaRecorder API — no deps for recording |
+| **Audio processing** | `wave` + `numpy` | 16kHz mono PCM resampling — zero ffmpeg dependency |
+| **Serving** | Nginx reverse proxy | Single origin, gzip, `/api/*` proxied to FastAPI |
+| **Containerization** | Docker multi-stage builds | ~250MB images, non-root user, health checks |
+| **CI/CD** | GitHub Actions → GHCR | Lint → test → multi-platform build → deploy on tag |
+| **Deployment** | Render (Docker runtime) | `render.yaml` Blueprint — one-click deploy |
+
+---
+
+## Architecture
+
+```
+       Browser
+           │
+           ▼
+  ┌─────────────────┐
+  │  Nginx :80      │  ← serves React SPA + proxies /api/*
+  └────────┬────────┘
+           │
+    ┌──────┴──────┐
+    ▼             ▼
+  React         FastAPI :8000
+  dist/          api.py
+                   │
+             ┌─────┴─────┐
+             ▼           ▼
+           Groq      HuggingFace
+          (primary)  (fallback)
+```
+
 ---
 
 ## Quick Start
