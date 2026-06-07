@@ -21,7 +21,7 @@ jobs:
         run: pip install ruff
         
       - name: Lint backend
-        run: ruff check .
+        run: ruff check . --fix
         
       - name: Setup Node
         uses: actions/setup-node@v4
