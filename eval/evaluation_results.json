@@ -1,0 +1,38 @@
+{
+  "avg_faithfulness": 0.9095,
+  "best": 1.0,
+  "worst": 0.7143,
+  "n_samples": 5,
+  "per_sample": [
+    {
+      "case": 1,
+      "length_option": "Standard (5\u20138 points)",
+      "faithfulness": 1.0,
+      "summary_preview": "### Meeting Summary\nThe meeting covered the product roadmap and key tasks to ensure the new dashboard ships by the end o..."
+    },
+    {
+      "case": 2,
+      "length_option": "Standard (5\u20138 points)",
+      "faithfulness": 0.8333,
+      "summary_preview": "### Summary of Gradient Descent Lecture\n* **Introduction to Gradient Descent**: Gradient descent is a fundamental concep..."
+    },
+    {
+      "case": 3,
+      "length_option": "Brief (3\u20135 points)",
+      "faithfulness": 1.0,
+      "summary_preview": "### Sprint Retrospective Summary\n* The team successfully stabilized the CI pipeline and implemented a new code review pr..."
+    },
+    {
+      "case": 4,
+      "length_option": "Detailed (full breakdown)",
+      "faithfulness": 0.7143,
+      "summary_preview": "### Analysis of Climate Change Mitigation Strategies Discussion\n#### Overview\nThe discussion focused on climate change m..."
+    },
+    {
+      "case": 5,
+      "length_option": "Standard (5\u20138 points)",
+      "faithfulness": 1.0,
+      "summary_preview": "### Q3 Budget Review Summary\nThe following key points were discussed during the Q3 budget review meeting:\n* Marketing ex..."
+    }
+  ]
+}
