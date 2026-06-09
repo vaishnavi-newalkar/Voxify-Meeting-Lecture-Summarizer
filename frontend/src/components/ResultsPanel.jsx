@@ -1,4 +1,5 @@
-import { FileText, Download, FileDown, CheckSquare, Users, Clock } from "lucide-react";
+import { FileText, Download, FileDown, CheckSquare, Users } from "lucide-react";
+//  Clock 
 import ReactMarkdown from "react-markdown";
 import { exportTxt, exportPdf } from "../api";
 
@@ -154,7 +155,7 @@ export default function ResultsPanel({ results, settings }) {
           <button
             className="export-btn"
             onClick={() =>
-              downloadText(actionItems.map((a, i) => `[ ] ${a}`).join("\n"), "action_items.txt")
+              downloadText(actionItems.map((a) => `[ ] ${a}`).join("\n"), "action_items.txt")
             }
           >
             <CheckSquare size={16} /> Action Items

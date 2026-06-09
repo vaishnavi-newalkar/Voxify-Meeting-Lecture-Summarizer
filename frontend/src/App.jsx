@@ -77,7 +77,8 @@ export default function App() {
 
       mediaRecorder.current.start();
       setRecording(true);
-    } catch (err) {
+    } catch (error){
+      console.error(error);
       alert("Microphone access denied. Please allow microphone permissions.");
     }
   };
@@ -154,8 +155,9 @@ export default function App() {
       setTimeout(() => {
         document.getElementById("results")?.scrollIntoView({ behavior: "smooth" });
       }, 200);
-    } catch (err) {
-      alert("Error: " + err.message);
+    } catch (error){
+      console.error(error);
+      alert("Error: " + error.message);
     } finally {
       setLoading(false);
       setLoadingStep("");

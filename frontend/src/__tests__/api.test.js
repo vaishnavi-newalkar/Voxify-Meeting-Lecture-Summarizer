@@ -1,8 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { transcribeAudio, summarizeTranscript, identifySpeakers, exportTxt, exportPdf } from '../api';
+import { transcribeAudio, summarizeTranscript } from '../api';
+// , identifySpeakers, exportTxt, exportPdf
 
 // Mock the global fetch function
-global.fetch = vi.fn();
+globalThis.fetch = vi.fn();
 
 describe('API functions', () => {
   beforeEach(() => {
