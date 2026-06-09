@@ -9,7 +9,6 @@ import wave
 import tempfile
 import json
 import numpy as np
-from datetime import datetime
 from pathlib import Path
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException

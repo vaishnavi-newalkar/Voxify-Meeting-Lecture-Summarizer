@@ -14,7 +14,6 @@ All external API calls (Groq, HuggingFace) are mocked.
 
 import io
 import json
-import pytest
 from unittest.mock import patch
 
 

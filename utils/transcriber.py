@@ -5,8 +5,6 @@ Groq:        Uses whisper-large-v3-turbo via Groq's ultra-fast inference API
 HuggingFace: Uses openai/whisper-large-v3 via HF Inference API
 """
 
-import os
-import json
 import requests
 from pathlib import Path
 

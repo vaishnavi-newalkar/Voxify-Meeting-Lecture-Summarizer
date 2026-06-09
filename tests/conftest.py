@@ -8,7 +8,6 @@ Provides:
 """
 
 import io
-import os
 import wave
 import struct
 import pytest
