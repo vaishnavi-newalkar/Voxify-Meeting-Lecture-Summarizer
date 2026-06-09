@@ -15,14 +15,7 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 
-# ── Path setup — lets us import from utils/ ──────────────────────────────────
-ROOT = Path(__file__).parent.parent          # voxify project root
-sys.path.insert(0, str(ROOT))
 
-load_dotenv(ROOT / ".env")                   # loads GROQ_API_KEY
-
-# ── Your existing summarizer — exact function, no mocking ────────────────────
-from utils.summarizer import summarize_text
 
 # ── RAGAS imports (v0.2+ API) ────────────────────────────────────────────────
 from ragas import evaluate, EvaluationDataset
@@ -31,6 +24,14 @@ from ragas.metrics import Faithfulness
 from ragas.llms import LangchainLLMWrapper
 from langchain_groq import ChatGroq
 
+# ── Path setup — lets us import from utils/ ──────────────────────────────────
+ROOT = Path(__file__).parent.parent          # voxify project root
+sys.path.insert(0, str(ROOT))
+
+load_dotenv(ROOT / ".env")                   # loads GROQ_API_KEY
+
+# ── Your existing summarizer — exact function, no mocking ────────────────────
+from utils.summarizer import summarize_text
 
 # ── Config ────────────────────────────────────────────────────────────────────
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
