@@ -16,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
 from utils.transcriber import transcribe_with_groq, transcribe_with_huggingface
-from utils.summarizer import summarize_text, extract_action_items, identify_speakers
+from utils.summarizer import summarize_text, extract_action_items, identify_speakers  
 from utils.exporter import export_to_txt, export_to_pdf
 
 app = FastAPI(

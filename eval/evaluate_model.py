@@ -28,7 +28,7 @@ from langchain_groq import ChatGroq
 # ── Path setup — lets us import from utils/ ──────────────────────────────────
 ROOT = Path(__file__).parent.parent          # voxify project root
 sys.path.insert(0, str(ROOT))
-from utils.summarizer import summarize_text
+from utils.summarizer import summarize_text   # noqa: E402
 load_dotenv(ROOT / ".env")                   # loads GROQ_API_KEY
 
 
