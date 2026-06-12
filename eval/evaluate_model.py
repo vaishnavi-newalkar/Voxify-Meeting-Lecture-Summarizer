@@ -23,13 +23,12 @@ from ragas.dataset_schema import SingleTurnSample
 from ragas.metrics import Faithfulness
 from ragas.llms import LangchainLLMWrapper
 from langchain_groq import ChatGroq
-# ── Your existing summarizer — exact function, no mocking ────────────────────
-from utils.summarizer import summarize_text
+
 
 # ── Path setup — lets us import from utils/ ──────────────────────────────────
 ROOT = Path(__file__).parent.parent          # voxify project root
 sys.path.insert(0, str(ROOT))
-
+from utils.summarizer import summarize_text
 load_dotenv(ROOT / ".env")                   # loads GROQ_API_KEY
 
 
